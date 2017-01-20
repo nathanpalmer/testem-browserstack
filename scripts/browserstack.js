@@ -61,4 +61,4 @@ client.createWorker(settings, function(error, worker) {
 
 setTimeout(function() {
   client.terminateWorker(WORKER_ID);
-}, 600000);
+}, process.env.BROWSERSTACK_CLIENT_TIMEOUT || 600000);
